@@ -26,7 +26,7 @@
 #include "hardware/pwm.h"
 #include "hardware/rtc.h"
 
-// Bibliotecas de Terceiros e Locais
+// Bibliotecas Locais
 #include "lib/mpu6050.h"
 #include "lib/ssd1306.h"
 #include "lib/font.h"
@@ -104,7 +104,6 @@ absolute_time_t message_timestamp;
 
 // =================================================================================
 // SEÇÃO DE FUNÇÕES
-// (Definidas em ordem de dependência para evitar a necessidade de protótipos)
 // =================================================================================
 
 // Aciona o LED RGB para exibir uma cor específica.
@@ -124,7 +123,7 @@ void play_tone(uint freq, uint duration_ms);
 
 // Toca um bip de confirmação de ação.
 void play_confirmation_beep() {
-    play_tone(600, 120);
+    play_tone(300, 120);
 }
 
 // Toca um bip duplo de erro.
